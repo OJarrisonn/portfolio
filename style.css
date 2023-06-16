@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Red+Hat+Display:wght@400;800&display=swap');
+
+:root {
+    --seasalt: #F7F7F7;
+    --raisin-black: #28262C;
+    --night: #141414;
+    --periwinkle: #CCCCFF;
+    --tropical-indigo: #8B80F9;
+    --majorelle-blue: #6050DC;
+    --lemon-chiffon: #FFFACD;
+    --flax: #EEDC82;
+    --unsat-tropical-indigo: #7b74ca;
+}
+
+body {
+    background-color: var(--raisin-black);
+    color: var(--seasalt);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--seasalt);
+}
+
+#header {
+    position: sticky;
+
+    background: var(--night);
+    background: linear-gradient(165deg, var(--night) 60%, var(--unsat-tropical-indigo) 100%);
+
+    font-family: 'Red Hat Display', sans-serif;
+    
+    top: 0;
+
+    padding: 2em;
+    border-radius: 0 0 1em 1em;
+}
+
+#header .toolbar {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    align-items: center;
+}
+
+#header .title-toolbar {
+    font-weight: 800;
+    font-size: 4em;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#header .button-toolbar {
+    background-color: transparent;
+    
+    font-weight: 400;
+    font-size: 1em;
+
+    padding: 0.5em 2em;
+    margin-left: 1em;
+
+    max-width: fit-content;
+
+    border-radius: .5em;
+}
+
+#header .button-toolbar:hover {
+    background-color: var(--raisin-black);
+}
+
+#header .button-toolbar:active {
+    background-color: var(--tropical-indigo);
+}
+
+#main {
+    padding: 2em;
+}
+
+#main h1 {
+    font-family: 'Red hat Display', sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: fit-content;
+
+    border-bottom: 0.125em solid var(--majorelle-blue);
+}
+
+#main h1:hover {
+    border-bottom: 0.125em solid var(--flax);
+
+}
+
+#main .section-home{
+    background-color: var(--night);
+
+    margin: 0;
+    padding: 2em;
+
+    border-radius: 2em;
+}
+
+#main .section-home .title-home {
+    background: linear-gradient(135deg, var(--lemon-chiffon) 50%, var(--tropical-indigo) 100%);
+    color: var(--night);
+
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 6em;
+    font-weight: 800;
+    text-align: center;
+
+    margin: 0 0 1em 0;
+    padding: 2em 0 2em 0;
+
+    border-radius: .33em;
+}
+
+#main .section-home .text-home {
+    font-size: 1.5em;
+    font-style: italic;
+
+    text-align: right;
+}
+
+#main h1 {
+    font-weight: 400;
+    font-size: 2em;
+}
