@@ -5,9 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[WIP]Harrisonn</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <template id="template-card-project">
+        <a id="card-project" class="card-project" href="http://www.example.com/" target="_blank">
+            <div>
+                <img id="image-project" src="https://placehold.co/400" alt="placeholder">
+                <div style="bottom: 0;">
+                    <h2 id="title-project">Lorem Ipsum Dolor</h2>
+                    <p id="description-project">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est natus eligendi voluptate modi aspernatur fugit, officia dolore ullam alias, sed reiciendis soluta qui. Repellat magni nostrum consequatur eveniet voluptate quam?</p>    
+                    <div style="display: flex; flex-direction: row; gap: .75em">
+                        <p id="status-project" class="status-project"></p>
+                        <p id="type-project" class="type-project"></p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </template>
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/loadProjects.js"></script>
+
+
 </head>
-<body>
+<body onload="loadProjects();">
     <header id="header">
         <div class="toolbar">
             <div>
@@ -15,9 +35,9 @@
             </div>
                 
             <a href="#inicio"><div class="button-toolbar">Início</div></a>
-            <div class="button-toolbar">Sobre</div>
-            <div class="button-toolbar">Projetos</div>
-            <div class="button-toolbar">Contato</div>
+            <a href="#sobre"><div class="button-toolbar">Sobre</div></a>
+            <a href="#projetos"><div class="button-toolbar">Projetos</div></a>
+            <a href="#contato"><div class="button-toolbar">Contato</div></a>
         </div>
         <div></div>
     </header>
@@ -26,31 +46,58 @@
         <section id="inicio"></section>
 
         <div class="section-home">
-            <p class="title-home">Bem-vindo a meu portifólio!</p>
-            <p class="text-home">Olá, muito prazer. Eu sou o Harrisonn e este site tem como objetivo ser um portifólio onde irei deixar registrados alguns de meus projetos, quem eu sou e conquistas que alcancei.</p>
-            <p class="text-home">O site foi todo criado por mim, fique a vontade para enviar sugestões de melhorias para a página :)</p>
+            <div class="title-home">
+                <p>Bem-vindo ao meu portifólio!</p>
+            </div>
+            <div class="text-home">
+                <p>Olá, muito prazer. Eu sou o Harrisonn e este site tem como objetivo ser um portifólio onde irei deixar registrados alguns de meus projetos, quem eu sou e conquistas que alcancei.</p>
+                <p>O site foi todo criado por mim, fique a vontade para enviar sugestões de melhorias para a página :)</p>
+            </div>
         </div>
         
+        <section id="sobre"></section>
         <h1>Quem sou eu?</h1>
 
         <div class="section-about">
-            <p>Me chamo Jorge Harrisonn Mantovanelli Thomes Vieira, original do norte do Espirito Santo e criado pelos avós no interior da cidade de Jaguaré-ES. Desde minha infância sempre fui um aspirante a investigar e pesquisar. A palavra "como" sempre me acompanhou. Sempre queria saber como as coisas eram feitas, o como funcionavam e, mais importante, como eu poderia fazer elas eu mesmo.</p>
-            <p>Por mais que eu tivesse vários brinquedos, eu sempre queria criar os meus próprios, até que um dia, eu fui atrás de mais um "como". Fui pesquisar na internet: "como criar um jogo?", e foi aí que descobri o mundo da programação lá pelo ano de 2016 (eu tinha 12 anos na época).</p>
-            <p>Caí em um vídeo no YouTube onde ensinavam a criar uma espécie de clone do joguinho do dinossauro do Google Chrome. Obviamente, não criei nenhum jogo AAA, as sprites que usei são muito toscas, mas estava feito, o meu próprio jogo. De lá para cá, criei mais alguns jogos, alguns deles publicados na GameJolt, criei alguns mods para Minecraft (apenas um deles eu tive coragem de publicar no site CurseForge) e passei milhares de horas pesquisando mais sobre programação, adquirindo mais e mais informações. De fato, por uma parte muito grande do meu aprendizado, eu não me organizava o suficiente para criar projetos, concluir e publicar. Mas o que esperar de um adolescente? Porém foi ali, que surgiu em mim uma fagulha, eu vi que era aquilo que eu queria investir e trabalhar com isso pelo resto da minha vida. Então comecei a traçar meu plano de fazer Ciência da Computação na faculdade (sim, com 12 anos eu decidi qual curso eu queria).</p>
-            <p>Foi então que em 2019, eu entrei para o Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo, também conhecido como IFES. No IFES eu tive meu primeiro contato com pessoas que me motivavam a insistir mais e continuar desenvolvendo meus projetos. No IFES, me formei como técnico em automação industrial (era a coisa mais similar com computação que dava para fazer na minha região), onde aprendi a mexer com tecnologias como Arduino e instrumentação industrial em geral. Meu tempo no IFES foi um ponto de virada na minha vida, onde eu vi que eu poderia ir mais longe do que sonhava, e comecei a traçar metas mais altas.</p>
-            <p>Por influência de amigos do IFES, resolvi me inscrever na FUVEST. Tive que vir a São Paulo fazer a prova, o que não foi nada barato, mas felizmente eu passei e entrei para a Universidade de São Paulo (USP) para fazer o meu tão desejado curso de Ciência da Computação.</p>
-            <p>Na USP, comecei a me aprofundar de fato em áreas da computação como redes, sistemas e Linux. Ainda estou no segundo ano, mas já tenho traçado meu plano da faculdade e o que irei tentar ao final da graduação.</p>
-            <p>Meu sonho é trabalhar criando. Sejam jogos ou quaisquer outro tipo de sistema. Sempre foi minha paixão ter o poder de criar as coisas por conta própria para saber o "como" e é isso que eu quero continuar fazendo.</p>
+            <h2 class="title-about">Minhas origens</h1>
+            <div class="text-about">
+                <p>Eu me chamo Jorge Harrisonn Mantovanelli Thomes Vieira, sou originário do norte do Espírito Santo e fui criado no interior da cidade de Jaguaré-ES pelos meus avós. Por que fui criado pelos meus avós? Pois sou órfão de pai e mãe, então eles me criaram no interior.</p>
+                <p>Por morar no interior, eu cresci um pouco isolado de outras pessoas e com isso, eu passava muito tempo com meus brinquedos e investigando tudo que podia para saber o porquê e o como. Aprender era um dos meus passatempos favoritos.</p>
+                <p>Eu nunca estava satisfeito com meus brinquedos, eu sempre queria inventar os meus próprios brinquedos. Tinha vários carrinhos, mas eu adorava montar carrinhos de papel. Até que um dia, meus avós resolveram correr atrás de instalar internet e comprar um notebook. Inicialmente eu não gostava de mexer no notebook, pois eu tinha medo de estragar ele, mas com o tempo o medo passou e ali se abriu uma nova janela para eu continuar pesquisando e explorando o incrivel mundo da internet (através de um modem bastante ruim).</p>
+            </div>
+            <h2 class="title-about">Como conheci a computação?</h1>
+            <div class="text-about">
+                <p>Em um dado momento, eu quis descobrir um novo como. Como eram feitos os jogos? Foi aí que eu descobri a programação. Caí em um vídeo do YouTube que ensinava a criar um clone do jogo do dinossauro do Chrome. Tenho esse jogo salvo até hoje. É um jogo bastante simples, com sprites muito mal feitas (eu tinha 12 anos e estava desenhando usando o touchpad do meu notebook), mas era o meu próprio jogo. Eu fiquei encantado com aquilo, embora nenhuma das pessoas para quem eu mostrei o jogo se pareceu muito impressionada. Mas foi aí que eu escolhi a Ciência da Computação como meu futuro.</p>
+                <p>Meus anos seguintes foram basicamente desbravando esse mundo da programação para entender como outras coisas eram feitas. Aprendi mais sobre jogos, sobre sites, sobre hardware, sobre mods para Minecraft (meu jogo favorito), mas nunca conseguia me organizar para criar e terminar projetos.</p>
+                <p>Até que eu entrei no Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo, também conhecido como IFES. Lá fiz um curso técnico em Automação Industrial integrado ao meu ensino médio. Tive professores que estavam mais ligados à área da computação e por influência de amigos e professores tentei a FUVEST e consegui entrar para a Universidade de São Paulo para fazer o tão sonhado curso de Ciência da Computação.</p>
+            </div>
+            <h2 class="title-about">Para onde vou?</h1>
+            <div class="text-about">
+                <p>Agora na USP eu comecei a me aprofundar de fato em campos mais específicos da computação, como sistemas, redes de computadores e Linux. Meus objetivos para depois da faculdade envolvem trabalhar como desenvolvedor. Eu me sinto feliz criando coisas e é isso que eu quero fazer.</p>
+            </div>
         </div>
         
+        <section id="projetos"></section>
         <h1>Projetos</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit iusto impedit ducimus fuga similique consequuntur quisquam inventore architecto ipsum rerum omnis in, debitis sunt voluptate praesentium minus recusandae. Nemo, temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam sit animi voluptas quos explicabo iure alias amet. Ea, reiciendis! Odit ipsa deleniti amet doloremque repellat blanditiis natus sed quae totam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos officia ipsa, magni perspiciatis rerum eum facere, ratione ex accusamus adipisci maxime sint ab facilis! Vel molestias similique maiores eveniet laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur libero laborum provident porro odit aperiam, omnis autem molestiae. Nisi unde accusantium iure vel, tempora temporibus amet molestias illum aliquid!</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit iusto impedit ducimus fuga similique consequuntur quisquam inventore architecto ipsum rerum omnis in, debitis sunt voluptate praesentium minus recusandae. Nemo, temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam sit animi voluptas quos explicabo iure alias amet. Ea, reiciendis! Odit ipsa deleniti amet doloremque repellat blanditiis natus sed quae totam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos officia ipsa, magni perspiciatis rerum eum facere, ratione ex accusamus adipisci maxime sint ab facilis! Vel molestias similique maiores eveniet laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur libero laborum provident porro odit aperiam, omnis autem molestiae. Nisi unde accusantium iure vel, tempora temporibus amet molestias illum aliquid!</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit iusto impedit ducimus fuga similique consequuntur quisquam inventore architecto ipsum rerum omnis in, debitis sunt voluptate praesentium minus recusandae. Nemo, temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam sit animi voluptas quos explicabo iure alias amet. Ea, reiciendis! Odit ipsa deleniti amet doloremque repellat blanditiis natus sed quae totam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos officia ipsa, magni perspiciatis rerum eum facere, ratione ex accusamus adipisci maxime sint ab facilis! Vel molestias similique maiores eveniet laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur libero laborum provident porro odit aperiam, omnis autem molestiae. Nisi unde accusantium iure vel, tempora temporibus amet molestias illum aliquid!</p>
+
+        <div id="section-projects" class="section-projects"></div>
         
+        <section id="contato"></section>
         <h1>Contato</h1>
-        <p>Aqui abaixo estão algumas das minhas redes sociais, para caso queira entrar em contato comigo :)</p>
-        
+        <div class="section-contact">
+            <a class="card-contact" href="http://github.com/OJarrisonn" target="_blank">
+                <img src="imgs/github.png" alt="github">
+                <p>GitHub: OJarrisonn</p>
+            </a>
+            <a class="card-contact" href="https://www.instagram.com/ojarrisonn_/" target="_blank">
+                <img src="imgs/instagram.png" alt="instagram">
+                <p>Instagram: @ojarrisonn_</p>
+            </a>
+            <a class="card-contact" href="" target="_blank">
+                <img src="imgs/linkedin.png" alt="linkedin">
+                <p>LinkedIn: Jorge Harrisonn Mantovanelli Thomes Vieira</p>
+            </a>
+        </div>
 
     </div>
     <footer id="footer">
