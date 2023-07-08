@@ -1,0 +1,26 @@
+@import url(vars.css);
+
+body {
+    color: var(--seasalt);
+
+    background-color: var(--raisin-black);
+    background-image: url('../imgs/background.jpg');
+}
+
+header {
+    color: var(--seasalt);
+
+    background: var(--night);
+    background: linear-gradient(165deg, var(--night) 60%, var(--unsat-tropical-indigo) 100%);
+}
+
+header button {
+    color: var(--seasalt);
+
+    background-color: transparent;
+}
+
+header button:hover {
+    color: var(--night);
+    background-color: var(--flax);
+}

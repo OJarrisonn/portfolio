@@ -1,0 +1,47 @@
+@import url('vars.css');
+
+
+/* Elementos do cabeçalho */
+body {
+    font-size: 16px;
+}
+
+header {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+header h1 {
+    font-size: 4em;
+    
+    text-align: center;
+    
+    line-height: .5em; 
+}
+
+header h1 span {
+    font-family: 'Inter', sans-serif; 
+    font-style: italic; 
+    font-size: 0.25em;
+    
+    font-weight: 400; 
+}
+
+header button {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.25em;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 12px;
+    }   
+
+    header h1 {
+        margin-bottom: 0;
+    }
+
+    header button {
+        font-size: 1em;
+    }
+
+}

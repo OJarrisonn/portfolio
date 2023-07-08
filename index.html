@@ -22,86 +22,106 @@
         </a>
     </template>
     
-    <link rel="stylesheet" href="styles/style.css">
+    <!-- Load fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!-- Load style sheets -->
+    <!--<link rel="stylesheet" href="styles/style.css">-->
+    <link rel="stylesheet" href="styles/position.css">
+    <link rel="stylesheet" href="styles/color.css">
+    <link rel="stylesheet" href="styles/text.css">
+    
+    <!-- Scripts -->
     <script src="scripts/loadProjects.js"></script>
 
 
 </head>
 <body onload="loadProjects();">
-    <header id="header">
-        <div class="toolbar">
-            <div>
-                <p class="title-toolbar" style="line-height: .5em; text-align: center;">HARRISONN<br><span style="font-family: 'Inter', sans-serif; font-weight: 400; font-style: italic; font-size: 0.25em;">Work-in-progress</span></p>
-            </div>
-                
-            <a href="#inicio"><div class="button-toolbar">Início</div></a>
-            <a href="#sobre"><div class="button-toolbar">Sobre</div></a>
-            <a href="#projetos"><div class="button-toolbar">Projetos</div></a>
-            <a href="#contato"><div class="button-toolbar">Contato</div></a>
+    <header>
+        <h1>
+            HARRISONN<br>
+            <span>Work-in-progress</span>
+        </h1>
+            
+        <div class="button-set">
+            <button onclick="location.href='#home'">Início</button>
+            <button onclick="location.href='#about'">Sobre</button>
+            <button onclick="location.href='#projects'">Projetos</button>
+            <button onclick="location.href='#contact'">Contato</button>
         </div>
-        <div></div>
+
+        <button class="button-set-toggle">X</button>
+        
     </header>
+
+    <!-- Corpo do site -->
     <div id="main">
 
-        <section id="inicio"></section>
+        <!-- Seção de inicio -->
+        <section id="home">
+            <h1>Bem-vindo ao meu portifólio!</h1>
+                <p>Olá, muito prazer. Eu sou o Harrisonn e este site tem como objetivo ser um portifólio onde irei deixar registrados alguns de meus projetos, quem eu sou e conquistas que alcancei.<br>O site foi todo criado por mim, fique a vontade para enviar sugestões de melhorias para a página :)</p>
+        </section>
 
-        <div class="section-home">
-            <div class="title-home">
-                <p>Bem-vindo ao meu portifólio!</p>
+        <!-- Seção de sobre mim -->
+        <section id="about">
+            <h1>Quem sou eu?</h1>
+    
+            <div class="panel">
+                <h2>Minhas origens</h1>
+                <p>
+                    Eu me chamo Jorge Harrisonn Mantovanelli Thomes Vieira, sou originário do norte do Espírito Santo e fui criado no interior da cidade de Jaguaré-ES pelos meus avós. Por que fui criado pelos meus avós? Pois sou órfão de pai e mãe, então eles me criaram no interior.<br>
+                    Por morar no interior, eu cresci um pouco isolado de outras pessoas e com isso, eu passava muito tempo com meus brinquedos e investigando tudo que podia para saber o porquê e o como. Aprender era um dos meus passatempos favoritos.<br>
+                    Eu nunca estava satisfeito com meus brinquedos, eu sempre queria inventar os meus próprios brinquedos. Tinha vários carrinhos, mas eu adorava montar carrinhos de papel. Até que um dia, meus avós resolveram correr atrás de instalar internet e comprar um notebook. Inicialmente eu não gostava de mexer no notebook, pois eu tinha medo de estragar ele, mas com o tempo o medo passou e ali se abriu uma nova janela para eu continuar pesquisando e explorando o incrivel mundo da internet (através de um modem bastante ruim).
+                </p>
+                <h2>Como conheci a computação?</h1>
+                <p>
+                    Em um dado momento, eu quis descobrir um novo como. Como eram feitos os jogos? Foi aí que eu descobri a programação. Caí em um vídeo do YouTube que ensinava a criar um clone do jogo do dinossauro do Chrome. Tenho esse jogo salvo até hoje. É um jogo bastante simples, com sprites muito mal feitas (eu tinha 12 anos e estava desenhando usando o touchpad do meu notebook), mas era o meu próprio jogo. Eu fiquei encantado com aquilo, embora nenhuma das pessoas para quem eu mostrei o jogo se pareceu muito impressionada. Mas foi aí que eu escolhi a Ciência da Computação como meu futuro.<br>
+                    Meus anos seguintes foram basicamente desbravando esse mundo da programação para entender como outras coisas eram feitas. Aprendi mais sobre jogos, sobre sites, sobre hardware, sobre mods para Minecraft (meu jogo favorito), mas nunca conseguia me organizar para criar e terminar projetos.<br>
+                    Até que eu entrei no Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo, também conhecido como IFES. Lá fiz um curso técnico em Automação Industrial integrado ao meu ensino médio. Tive professores que estavam mais ligados à área da computação e por influência de amigos e professores tentei a FUVEST e consegui entrar para a Universidade de São Paulo para fazer o tão sonhado curso de Ciência da Computação.
+                </p>
+                <h2>Para onde vou?</h1>
+                <p>
+                    Agora na USP eu comecei a me aprofundar de fato em campos mais específicos da computação, como sistemas, redes de computadores e Linux. Meus objetivos para depois da faculdade envolvem trabalhar como desenvolvedor. Eu me sinto feliz criando coisas e é isso que eu quero fazer.
+                </p>
             </div>
-            <div class="text-home">
-                <p>Olá, muito prazer. Eu sou o Harrisonn e este site tem como objetivo ser um portifólio onde irei deixar registrados alguns de meus projetos, quem eu sou e conquistas que alcancei.</p>
-                <p>O site foi todo criado por mim, fique a vontade para enviar sugestões de melhorias para a página :)</p>
-            </div>
-        </div>
+        </section>
         
-        <section id="sobre"></section>
-        <h1>Quem sou eu?</h1>
+        <!-- Seção de projetos -->
+        <section id="projects">
+            <h1>Projetos</h1>
 
-        <div class="section-about">
-            <h2 class="title-about">Minhas origens</h1>
-            <div class="text-about">
-                <p>Eu me chamo Jorge Harrisonn Mantovanelli Thomes Vieira, sou originário do norte do Espírito Santo e fui criado no interior da cidade de Jaguaré-ES pelos meus avós. Por que fui criado pelos meus avós? Pois sou órfão de pai e mãe, então eles me criaram no interior.</p>
-                <p>Por morar no interior, eu cresci um pouco isolado de outras pessoas e com isso, eu passava muito tempo com meus brinquedos e investigando tudo que podia para saber o porquê e o como. Aprender era um dos meus passatempos favoritos.</p>
-                <p>Eu nunca estava satisfeito com meus brinquedos, eu sempre queria inventar os meus próprios brinquedos. Tinha vários carrinhos, mas eu adorava montar carrinhos de papel. Até que um dia, meus avós resolveram correr atrás de instalar internet e comprar um notebook. Inicialmente eu não gostava de mexer no notebook, pois eu tinha medo de estragar ele, mas com o tempo o medo passou e ali se abriu uma nova janela para eu continuar pesquisando e explorando o incrivel mundo da internet (através de um modem bastante ruim).</p>
-            </div>
-            <h2 class="title-about">Como conheci a computação?</h1>
-            <div class="text-about">
-                <p>Em um dado momento, eu quis descobrir um novo como. Como eram feitos os jogos? Foi aí que eu descobri a programação. Caí em um vídeo do YouTube que ensinava a criar um clone do jogo do dinossauro do Chrome. Tenho esse jogo salvo até hoje. É um jogo bastante simples, com sprites muito mal feitas (eu tinha 12 anos e estava desenhando usando o touchpad do meu notebook), mas era o meu próprio jogo. Eu fiquei encantado com aquilo, embora nenhuma das pessoas para quem eu mostrei o jogo se pareceu muito impressionada. Mas foi aí que eu escolhi a Ciência da Computação como meu futuro.</p>
-                <p>Meus anos seguintes foram basicamente desbravando esse mundo da programação para entender como outras coisas eram feitas. Aprendi mais sobre jogos, sobre sites, sobre hardware, sobre mods para Minecraft (meu jogo favorito), mas nunca conseguia me organizar para criar e terminar projetos.</p>
-                <p>Até que eu entrei no Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo, também conhecido como IFES. Lá fiz um curso técnico em Automação Industrial integrado ao meu ensino médio. Tive professores que estavam mais ligados à área da computação e por influência de amigos e professores tentei a FUVEST e consegui entrar para a Universidade de São Paulo para fazer o tão sonhado curso de Ciência da Computação.</p>
-            </div>
-            <h2 class="title-about">Para onde vou?</h1>
-            <div class="text-about">
-                <p>Agora na USP eu comecei a me aprofundar de fato em campos mais específicos da computação, como sistemas, redes de computadores e Linux. Meus objetivos para depois da faculdade envolvem trabalhar como desenvolvedor. Eu me sinto feliz criando coisas e é isso que eu quero fazer.</p>
-            </div>
-        </div>
-        
-        <section id="projetos"></section>
-        <h1>Projetos</h1>
+            <div class="section">
 
-        <div id="section-projects" class="section-projects"></div>
+            </div>
+        </section>
+
         
-        <section id="contato"></section>
-        <h1>Contato</h1>
-        <div class="section-contact">
-            <a class="card-contact" href="http://github.com/OJarrisonn" target="_blank">
-                <img src="imgs/github.png" alt="github">
-                <p>GitHub: OJarrisonn</p>
-            </a>
-            <a class="card-contact" href="https://www.instagram.com/ojarrisonn_/" target="_blank">
-                <img src="imgs/instagram.png" alt="instagram">
-                <p>Instagram: @ojarrisonn_</p>
-            </a>
-            <a class="card-contact" href="" target="_blank">
-                <img src="imgs/linkedin.png" alt="linkedin">
-                <p>LinkedIn: Jorge Harrisonn Mantovanelli Thomes Vieira</p>
-            </a>
-        </div>
+        <section id="contact">
+            <h1>Contato</h1>
+
+            <div class="section">
+                <a class="card" href="http://github.com/OJarrisonn" target="_blank">
+                    <img src="imgs/github.png" alt="github">
+                    <p>GitHub: OJarrisonn</p>
+                </a>
+                <a class="card" href="https://www.instagram.com/ojarrisonn_/" target="_blank">
+                    <img src="imgs/instagram.png" alt="instagram">
+                    <p>Instagram: @ojarrisonn_</p>
+                </a>
+                <a class="card" href="" target="_blank">
+                    <img src="imgs/linkedin.png" alt="linkedin">
+                    <p>LinkedIn: Jorge Harrisonn Mantovanelli Thomes Vieira</p>
+                </a>
+            </div>
+        </section>
 
     </div>
-    <footer id="footer">
 
-    </footer>
+    <footer> </footer>
 </body>
 </html>
