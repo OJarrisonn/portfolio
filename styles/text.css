@@ -71,6 +71,24 @@ header button {
     text-align: justify;
 }
 
+/* Elementos dos projects */
+
+#projects a, #contact a {
+    text-decoration: none;
+}
+
+#projects .tag {
+    font-size: 0.75em;
+
+    font-weight: 700;
+}
+
+/* Elementos do contact */
+
+#contact p {
+    font-weight: 700;
+}
+
 @media screen and (max-width: 1000px) {
     body {
         font-size: 12px;

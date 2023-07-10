@@ -35,7 +35,7 @@ let typeColors = {
 }
 
 function loadProjects() {
-    let secProj = document.getElementById("projects");
+    let secProj = document.getElementById("projects").getElementsByClassName("section")[0];
 
     data.forEach(item => {
         let templateCard = document.getElementById("project-template-card");

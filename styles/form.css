@@ -80,13 +80,71 @@ header .button-set-toggle {
     border-radius: .5em .5em 0 0;
 }
 
-#about .section, #projects .section, #contact .section {
+#about .section {
     margin: 0 1em;
 
     padding: 2em;
 }
 
+/* Elementos dos projects */
 
+#projects .section, #contact .section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    gap: 1em;
+    
+    margin: 0 1em;
+
+    padding: 2em;
+}
+
+#projects a {
+    max-width: 20em;
+    min-width: 15em;
+
+    padding: 1em;
+
+    border-radius: 1em;
+}
+
+#project-card img {
+    max-width: 20em;
+    max-height: 20em;
+
+    border-radius: 1em;
+}
+
+#projects .tag {
+    padding: .5em;
+
+    border-radius: .5em;
+}
+
+/* Elementos dos contact */
+
+#contact a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+    height: 4em;
+
+    padding: .5em;
+
+    border-radius: 1em;
+}
+
+#contact img {
+    width: 4em;
+    height: 4em;
+}
+
+/* Responsividade */
 
 @media screen and (max-width: 1000px) {
     /* Elementos do cabeçalho */
@@ -113,5 +171,10 @@ header .button-set-toggle {
         padding: .5em;
     }
 
+    /* Elementp do contact */
+
+    #contact p {
+        display: none;
+    }
 
 }

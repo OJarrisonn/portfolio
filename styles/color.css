@@ -49,6 +49,18 @@ header button:hover {
     background-color: var(--night);
 }
 
-#about .section {
+#about .section, #projects .section, #contact .section {
     background-color: var(--glassy-night);
+}
+
+/* Elementos dos projects */
+
+#projects a, #contact a {
+    color: var(--seasalt);
+
+    background-color: var(--raisin-black);
+}
+
+#projects .tag {
+    color: var(--seasalt)
 }
