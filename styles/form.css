@@ -177,6 +177,10 @@ header .button-set-toggle {
         padding: .5em;
     }
 
+    #home p {
+        min-width: 0;
+    }
+
     /* Elementp do contact */
 
     #contact p {

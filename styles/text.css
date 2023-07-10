@@ -48,6 +48,10 @@ header button {
     text-align: center;
 }
 
+#home p {
+    text-align: justify;
+}
+
 /* Elementos do about */
 
 #about h1, #projects h1, #contact h1 {
