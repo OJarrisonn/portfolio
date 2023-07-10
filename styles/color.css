@@ -1,0 +1,74 @@
+@import url(vars.css);
+
+body {
+    color: var(--seasalt);
+
+    background-color: var(--raisin-black);
+    background-image: url('../imgs/background.jpg');
+}
+
+/* Elementos do cabeçalho */
+
+header {
+    color: var(--seasalt);
+
+    background: var(--night);
+    background: linear-gradient(165deg, var(--night) 60%, var(--unsat-tropical-indigo) 100%);
+}
+
+header button {
+    color: var(--seasalt);
+
+    background-color: transparent;
+}
+
+header button:hover {
+    color: var(--night);
+    background-color: var(--flax);
+}
+
+/* Elementos do main */
+
+
+
+/* Elementos da home */
+
+#home {
+    background-color: var(--glassy-night);
+}
+
+#home h1 {
+    color: var(--night);
+    background: linear-gradient(135deg, var(--lemon-chiffon) 50%, var(--tropical-indigo) 100%);
+}
+
+/* Elementos do about */
+
+#about h1, #projects h1, #contact h1 {
+    color: var(--seasalt);
+    background-color: var(--night);
+}
+
+#about .section, #projects .section, #contact .section {
+    background-color: var(--glassy-night);
+}
+
+/* Elementos dos projects */
+
+#projects a, #contact a {
+    color: var(--seasalt);
+
+    background-color: var(--raisin-black);
+}
+
+#projects .tag {
+    color: var(--seasalt)
+}
+
+/* Efeitos de hover */
+
+#projects a:hover, #contact a:hover {
+    color: var(--night);
+
+    background: linear-gradient(135deg, var(--lemon-chiffon) 50%, var(--tropical-indigo) 100%);
+}

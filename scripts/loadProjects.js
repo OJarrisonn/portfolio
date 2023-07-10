@@ -35,10 +35,10 @@ let typeColors = {
 }
 
 function loadProjects() {
-    let secProj = document.getElementById("section-projects");
+    let secProj = document.getElementById("projects").getElementsByClassName("section")[0];
 
     data.forEach(item => {
-        let templateCard = document.getElementById("template-card-project");
+        let templateCard = document.getElementById("project-template-card");
         let node = document.importNode(templateCard.content, true);
         
         let imgSrc = document.createAttribute("src");
@@ -47,12 +47,12 @@ function loadProjects() {
         imgSrc.value = item["image"];
         imgAlt.value = item["name"];
         
-        let a = node.getElementById("card-project");
-        let img = node.getElementById("image-project");
-        let h2 = node.getElementById("title-project");
-        let p = node.getElementById("description-project");
-        let status = node.getElementById("status-project");
-        let type = node.getElementById("type-project");
+        let a = node.getElementById("project-card");
+        let img = node.getElementById("project-image");
+        let h2 = node.getElementById("project-title");
+        let p = node.getElementById("project-description");
+        let status = node.getElementById("project-status");
+        let type = node.getElementById("project-type");
         
         
         h2.innerHTML = item["name"];

@@ -1,0 +1,113 @@
+@import url('vars.css');
+
+
+/* Elementos do cabeçalho */
+
+body {
+    font-size: 16px;
+}
+
+header {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+header h1 {
+    font-size: 4em;
+    
+    text-align: center;
+    
+    line-height: .5em; 
+}
+
+header h1 span {
+    font-family: 'Inter', sans-serif; 
+    font-style: italic; 
+    font-size: 0.25em;
+    
+    font-weight: 400; 
+}
+
+header button {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.25em;
+}
+
+/* Elementos do main */
+
+#main {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Elementos da home */
+
+#home h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    font-size: 64px;
+
+    text-align: center;
+}
+
+#home p {
+    font-size: 20px;
+}
+
+/* Elementos do about */
+
+#about h1, #projects h1, #contact h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 2em;
+
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2em;
+
+    font-weight: 700;
+}
+
+#about p {
+    text-align: justify;
+}
+
+/* Elementos dos projects */
+
+#projects a, #contact a {
+    text-decoration: none;
+}
+
+#projects .tag {
+    font-size: 0.75em;
+
+    font-weight: 700;
+}
+
+/* Elementos do contact */
+
+#contact p {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 12px;
+    }   
+
+    /* Elementos do cabeçalho */
+    
+    header h1 {
+        margin-bottom: 0;
+        font-size: 2em;
+    }
+
+    header button {
+        font-size: 1.5em;
+    }
+    
+    /* Elementos do about */
+
+    #about p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,186 @@
+@import url('vars.css');
+
+/* Elementos do cabeçalho */
+
+body {
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+    padding: 2em;
+
+    border-radius: 0 0 1em 1em;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header .button-set {
+    display: flex;
+    gap: 1em;
+}
+
+header button {
+    padding: 1em;
+    
+    border-style: none;
+    border-radius: .5em;
+}
+
+header .button-set-toggle {
+    display: none;
+}
+
+/* Elementos do main */
+
+/* Elementos da home */
+
+#home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2em;
+
+    margin: 1em;
+    padding: 2em;
+
+    border-radius: 1em;
+}
+
+#home h1 {
+    max-width: 1000px;
+
+    margin: 0;
+    padding: 1em;
+
+    border-radius: 0.2em;
+}
+
+#home p {
+    min-width: 600px;
+}
+
+/* Elementos do about */
+
+#about h1, #projects h1, #contact h1 {
+    width: fit-content;
+
+    margin: 3em auto 0 auto;
+
+    padding: .5em 1em;
+
+    border-bottom: 0.125em solid var(--majorelle-blue);
+    border-radius: .5em .5em 0 0;
+}
+
+#about .section {
+    margin: 0 1em;
+
+    padding: 2em;
+}
+
+/* Elementos dos projects */
+
+#projects .section, #contact .section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    gap: 1em;
+    
+    margin: 0 1em;
+
+    padding: 2em;
+}
+
+#projects a {
+    max-width: 20em;
+    min-width: 15em;
+
+    padding: 1em;
+
+    border-radius: 1em;
+}
+
+#project-card img {
+    max-width: 20em;
+    max-height: 20em;
+
+    border-radius: 1em;
+}
+
+#projects .tag {
+    padding: .5em;
+
+    border-radius: .5em;
+}
+
+/* Efeitos de hover */
+
+#projects a:hover, #contact a:hover {
+    scale: 1.05;
+}
+
+/* Elementos dos contact */
+
+#contact a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+    height: 4em;
+
+    padding: .5em;
+
+    border-radius: 1em;
+}
+
+#contact img {
+    width: 4em;
+    height: 4em;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1000px) {
+    /* Elementos do cabeçalho */
+
+    header {
+        flex-direction: column;
+    }
+
+    header h1 span {
+        display: none;
+    }
+
+    header button {
+        padding: .5em 1em;
+    }
+
+    /* Elementos da home */
+
+    #home {
+        flex-direction: column;
+    }
+
+    #home h1 {
+        padding: .5em;
+    }
+
+    /* Elementp do contact */
+
+    #contact p {
+        display: none;
+    }
+
+}
