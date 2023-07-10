@@ -64,3 +64,11 @@ header button:hover {
 #projects .tag {
     color: var(--seasalt)
 }
+
+/* Efeitos de hover */
+
+#projects a:hover, #contact a:hover {
+    color: var(--night);
+
+    background: linear-gradient(135deg, var(--lemon-chiffon) 50%, var(--tropical-indigo) 100%);
+}

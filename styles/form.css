@@ -124,6 +124,12 @@ header .button-set-toggle {
     border-radius: .5em;
 }
 
+/* Efeitos de hover */
+
+#projects a:hover, #contact a:hover {
+    scale: 1.05;
+}
+
 /* Elementos dos contact */
 
 #contact a {
